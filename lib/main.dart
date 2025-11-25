@@ -21,6 +21,7 @@ class MyApp extends StatelessWidget {
               TitleSection(
                 name: 'Oeschinen Lake Campground',
                 location: 'Kandersteg, Switzerland',
+                stars: 41,
               ),
               ButtonSection(),
               TextSection(
@@ -33,6 +34,7 @@ class MyApp extends StatelessWidget {
               TitleSection(
                 name: 'Mitad del Mundo',
                 location: 'Quito, Ecuador',
+                stars: 55,
               ),
               ButtonSection(),
               TextSection(
@@ -45,6 +47,7 @@ class MyApp extends StatelessWidget {
               TitleSection(
                 name: 'Laguna Quilotoa',
                 location: 'Cotopaxi, Ecuador',
+                stars: 38,
               ),
               ButtonSection(),
               TextSection(
@@ -57,6 +60,7 @@ class MyApp extends StatelessWidget {
               TitleSection(
                 name: 'Baños de Agua Santa',
                 location: 'Tungurahua, Ecuador',
+                stars: 47,
               ),
               ButtonSection(),
               TextSection(
@@ -69,6 +73,7 @@ class MyApp extends StatelessWidget {
               TitleSection(
                 name: 'Volcán Cotopaxi',
                 location: 'Cotopaxi, Ecuador',
+                stars: 62,
               ),
               ButtonSection(),
               TextSection(
@@ -81,6 +86,7 @@ class MyApp extends StatelessWidget {
               TitleSection(
                 name: 'Islas Galápagos',
                 location: 'Archipiélago, Ecuador',
+                stars: 99,
               ),
               ButtonSection(),
               TextSection(
@@ -98,9 +104,10 @@ class MyApp extends StatelessWidget {
 class TitleSection extends StatelessWidget {
   final String name;
   final String location;
+  final int stars;
 
-  const TitleSection({Key? key, required this.name, required this.location})
-    : super(key: key);
+  const TitleSection({Key? key, required this.name, required this.location, required this.stars})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -124,8 +131,7 @@ class TitleSection extends StatelessWidget {
             ),
           ),
           Icon(Icons.star, color: Colors.red[500]),
-          const Text('41'),
-          
+          Text(stars.toString()),
         ],
       ),
     );
